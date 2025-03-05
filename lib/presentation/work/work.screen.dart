@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
-import 'package:get/get.dart';
-import 'package:mirai/mirai.dart';
-import 'dart:convert'; // For JSON decoding
-import 'controllers/work.controller.dart';
+import 'dart:convert';
+
+import 'package:stac/stac.dart'; // For JSON decoding
 
 class WorkScreen extends StatefulWidget {
   const WorkScreen({super.key});
@@ -57,7 +56,7 @@ class _WorkScreenState extends State<WorkScreen> {
 
           print(snapshot.data);
           // Pass the fetched JSON to Mirai.fromJson
-          return Mirai.fromJson(snapshot.data!, context) ?? SizedBox();;
+          return Stac.fromJson(snapshot.data!, context) ?? SizedBox();;
         },
       ),
     );

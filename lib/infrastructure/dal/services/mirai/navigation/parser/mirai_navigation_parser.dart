@@ -1,11 +1,11 @@
 import 'dart:async'; // For FutureOr
 import 'package:flutter/material.dart';
 import 'package:get/get.dart'; // For navigation with GetX
-import 'package:mirai_framework/mirai_framework.dart';
+import 'package:stac/stac.dart';
 
 import '../navigate_parse.dart'; // For MiraiActionParser
 
-class NavigateActionParser implements MiraiActionParser<NavigateAction> {
+class NavigateActionParser implements StacActionParser<NavigateAction> {
   @override
   String get actionType => 'navigates';
 

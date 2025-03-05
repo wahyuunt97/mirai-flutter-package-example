@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 import 'package:get/get.dart';
-import 'package:mirai/mirai.dart';
+import 'package:stac/stac.dart';
 
 import 'infrastructure/navigation/navigation.dart';
 import 'infrastructure/navigation/routes.dart';
@@ -15,7 +15,7 @@ void main() async {
   var initialRoute = await Routes.initialRoute;
 
   print("hittttt");
-  await Mirai.initialize(parsers: [
+  await Stac.initialize(parsers: [
     CustomContainerParser(), // Registrasi parser
   ], actionParsers: [
     NavigateActionParser(),
@@ -57,8 +57,8 @@ class Main extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MiraiApp(
-      theme: MiraiTheme.fromJson(themeJson),
+    return StacApp(
+      theme: StacTheme.fromJson(themeJson),
       homeBuilder: (context) {
         // Use MiraiTheme and pass it to GetMaterialApp
         return GetMaterialApp(

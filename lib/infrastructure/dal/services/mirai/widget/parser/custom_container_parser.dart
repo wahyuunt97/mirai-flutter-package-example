@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:mirai/mirai.dart';
-import 'package:mirai_framework/mirai_framework.dart';
 import 'package:mirai_test/infrastructure/dal/services/mirai/widget/custom_container.dart';
+import 'package:stac/stac.dart';
 
-class CustomContainerParser extends MiraiParser<CustomContainer> {
+class CustomContainerParser extends StacParser<CustomContainer> {
   @override
   String get type => 'customContainer';
 
@@ -29,7 +28,7 @@ class CustomContainerParser extends MiraiParser<CustomContainer> {
     // Parse the child widget if it exists
     Widget? childWidget;
     if (model.child != null) {
-      childWidget = Mirai.fromJson(model.child, context); // Parse using Mirai
+      childWidget = Stac.fromJson(model.child, context); // Parse using Mirai
     }
 
     return Container(

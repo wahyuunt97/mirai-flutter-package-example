@@ -2,9 +2,6 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:mirai/mirai.dart';
-import 'package:http/http.dart' as http;
-import 'package:mirai_test/presentation/screens.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
